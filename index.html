@@ -19,7 +19,7 @@
 
         body {
             margin: auto;
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
             height: 100%;
             align-self: center;
@@ -34,9 +34,6 @@
             font-style: normal;
         }
 
-        /* article, aside, footer, header, nav, section, figcaption, figure, main {
-    display: flex;
-} */
 
         h2 {
             align-self: stretch;
@@ -71,13 +68,14 @@
 
         }
 
-        header,
+        #About,
         .wrapper {
             display: flex;
-            flex: 1 1 0;
             justify-content: center;
             align-items: center;
             gap: 70px;
+
+            margin-top: 130px;
         }
 
         .img-cont {
@@ -101,15 +99,19 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            gap: 16px;
+            gap: 10px;
             display: flex;
             width: 100%;
         }
-
+        .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
         h1 {
             font-size: 3.5rem;
             font-weight: 600;
-            line-height: 67.20px;
+            line-height: 30px;
         }
 
         h4 {
@@ -158,8 +160,6 @@
             transform: scale(1.2);
 
         }
-
-
 
         .contact-cont a {
             text-decoration: none;
@@ -235,10 +235,10 @@
             border: 1px #E7EAEE solid;
             align-items: center;
             gap: 50px;
-             
+
         }
 
-        .cert-flex{
+        .cert-flex {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -292,8 +292,6 @@
         }
 
 
-
-
         .pattern7 {
             background: #ffe699;
             color: transparent;
@@ -323,62 +321,74 @@
         img {
             filter: grayscale(100%);
         }
-        img:hover{
+
+        img:hover {
             filter: grayscale(0%);
             transition: 1s;
             cursor: pointer;
         }
 
-        .img-cont img{
+        .img-cont img {
             filter: grayscale(0%);
         }
-        .progress{
+
+        .progress {
             color: #6252ec;
         }
 
-        .nav-bar{
-            width: 100%;
-            max-width: 500px;
+        a .active {}
+
+        ul .icon {
+            display: none;
+        }
+
+        .nav-bar {
             height: 50px;
             /* background-color: #d7d5f7; */
-            margin: 30px 0;
             padding: 1.5rem;
             position: relative;
-
-
         }
-        ul{
+
+        ul {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
         }
 
-        li{
+        li {
             list-style: none;
             padding: 20px;
             cursor: pointer;
             /* border-radius: 40px; */
         }
-        li:hover{
+
+        /* li:hover {
             background-color: #d7d5f7;
             border-radius: 50px;
-        }
+        } */
 
-        a{
+        a {
             text-decoration: none;
             color: #0b044a;
             transition: 1s;
         }
-        #footer{
-            
+
+      .active{
+            border-bottom: solid 1px #d7d5f7;
+            padding: 5px;
+        }
+
+        #footer {
+
             background-color: #0b044a;
             color: #fff;
             padding: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-radius: 20px 20px 0 0;
         }
-        .footer-parent{
+
+        .footer-parent {
             background-color: #0b044a;
             width: 100%;
             display: flex;
@@ -386,21 +396,38 @@
             align-items: center;
             gap: 50px;
         }
-        .contact{
+
+        .contact {
             display: flex;
             flex-direction: column;
         }
-        .footer-bottom a{
+
+        .footer-bottom a {
             color: #4132c3;
         }
 
-        button{
+        button {
             padding: 20px 40px;
             border-radius: 10px;
             border: 0;
             background-color: #6252ec;
             color: #fff;
         }
+
+        .sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 798px;
+    z-index: 100;
+    background-color: #0b044a;
+    border-radius: 0 0 20px 20px  ;
+}
+
+.sticky-header ul a{
+    color: #fff;
+}
+
 
         @media (max-width: 709px) {
             header {
@@ -419,7 +446,39 @@
             .cert-parent {
                 flex-wrap: wrap;
             }
+
+            ul li {
+                display: none;
+            }
+
+            ul{
+                justify-content: flex-end;
+            }
+            ul .icon{
+                float: right;
+                display: block;
+                font-size: 20px;
+                color: #0b044a;
+            }
+
+            ul .responsive {
+                position: relative;
+            }
+
+            ul li .responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            ul .responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
         }
+
 
         @media (max-width: 584px) {
             .contact-cont {
@@ -439,17 +498,19 @@
 
 <body>
 
-    <div class="nav-bar">
-        <ul>
-            <li><a href="#About" class="nav-link">About</a></li>
-            <li><a href="#Certification" class="nav-link">Certifications</a></li>
-            <li><a href="#Experience" class="nav-link">Experience</a></li>
-            <li><a href="#Tools" class="nav-link">Tools</a></li>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-        </ul>
-    </div>
+    <section class="sticky-header">
+        <nav class="nav-bar">
+            <ul class="top-nav" id="top-navi">
+                <li><a href="#About" class="nav-link active" onclick="activeLink()">About</a></li>
+                <li><a href="#Certification" class="nav-link" onclick="activeLink()">Certifications</a></li>
+                <li><a href="#Experience" class="nav-link" onclick="activeLink()">Experience</a></li>
+                <li><a href="#Tools" class="nav-link" onclick="activeLink()">Tools</a></li>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </nav>
+    </section>
 
     <section>
         <header id="About">
@@ -462,7 +523,11 @@
                     <h4 class="role">Entrepreneur, Investor, Web Engineer and Designer </h4>
                     <div class="bio">
                         <p>
-                            Experienced Digital Experience Partner, specifically specializing as a Frontent Web Developer with a strong background in web design, UX principles, and project management. I've excelled in crafting high-impact web solutions for the demanding Fintech and eCommerce sectors. Proficient in web design and web development tool stacks. A keen eye for aesthetics and user experience enhancing user web interfaces experience.
+                            Experienced Digital Experience Partner, specifically specializing as a Frontent Web
+                            Developer with a strong background in web design, UX principles, and project management.
+                            I've excelled in crafting high-impact web solutions for the demanding Fintech and eCommerce
+                            sectors. Proficient in web design and web development tool stacks. A keen eye for aesthetics
+                            and user experience enhancing user web interfaces experience.
                         </p>
                     </div>
                 </div>
@@ -560,7 +625,7 @@
             </div>
             <div class="cert-cont">
                 <div class="cert-parent">
-                    <div 
+                    <div
                         style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/csm.webp" />
                         <div class="cert-flex">
@@ -568,7 +633,7 @@
                                 CSM</p>
                         </div>
                     </div>
-                    <div 
+                    <div
                         style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/azure.png" />
                         <div class="cert-flex">
@@ -576,7 +641,7 @@
                             <p class="progress">In Progress</p>
                         </div>
                     </div>
-                    <div 
+                    <div
                         style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/AWS.png" />
                         <div class="cert-flex">
@@ -584,7 +649,7 @@
                             <p class="progress">In Progress</p>
                         </div>
                     </div>
-                    <div 
+                    <div
                         style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/DMI-CDMP.png" />
                         <div class="cert-flex">
@@ -822,16 +887,45 @@
         <div class="footer-parent">
             <div class="contact">
                 <h2>Connect with me</h2>
-                <button class="contact-btn"><h3>Contact</h3></button>
+                <button class="contact-btn">
+                    <h3>Contact</h3>
+                </button>
             </div>
             <div class="footer-bottom">
-                <p>Developed and Designed by <a href="http://">Dre</a><p>
+                <p>Developed and Designed by <a href="http://">Dre</a>
+                <p>
             </div>
         </div>
 
 
     </section>
     <script src="./doc.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("top-navi");
+            if (x.className === "top-nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "top-nav";
+            }
+        }
+
+        function activeLink() {
+            let x = document.getElementsByClassName("nav-bar");
+            let btn = document.getElementsByClassName("active")
+
+            for(let i=0; i < btn.length; i++) {
+                btn[i].addEventListener("click", function(){
+                    let current = document.getElementsByClassName("active");
+                    if(current.length > 0) {
+                        current[0].className = current[0].className.replace(" active", "");
+                    }
+                    this.className += "active";
+                });
+            }
+        }
+        
+    </script>
 
 </body>
 
