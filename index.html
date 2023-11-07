@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dre CV</title>
+    <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: auto;
+            max-width: 700px;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            padding: 0 64px;
+            background: white;
+            color: #0b044a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            font-style: normal;
+        }
+
+        /* article, aside, footer, header, nav, section, figcaption, figure, main {
+    display: flex;
+} */
+
+        h2 {
+            align-self: stretch;
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 48px;
+            padding-bottom: 10px;
+        }
+
+        .p-bold {
+            font-size: 1rem;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 20px;
+            word-wrap: break-word;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+
+        }
+
+        header,
+        .wrapper {
+            display: flex;
+            flex: 1 1 0;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .img-cont {
+            border-radius: 6px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            display: flex
+        }
+
+        .img-cont img {
+            width: 221px;
+            height: 221px;
+            border-radius: 14px
+        }
+
+        .profile-bio {
+            align-self: stretch;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 16px;
+            display: flex;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 67.20px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 30px;
+        }
+
+        .role {
+            align-self: stretch;
+            text-align: left;
+        }
+
+        bio {
+            align-self: stretch;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+
+        .profile-contact {
+            flex-direction: column;
+            justify-content: flex-start;
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-cont {
+            padding: 5px;
+            background: white;
+            border-radius: 8px;
+            border: 1px #E7EAEE solid;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+            box-shadow: 0 5px 15px -5px rgba(1, 1, 177, 0.072);
+            transition: 0.3s linear;
+
+        }
+
+        .contact-cont:hover {
+            transform: scale(1.2);
+
+        }
+
+
+
+        .contact-cont a {
+            text-decoration: none;
+
+        }
+
+        /* .contact-info{
+            width: 156px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: inline-flex
+        } */
+        /* .img-cont {
+            padding: 12px;
+            background: #F6F7F9;
+            border-radius: 4px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            display: flex;
+        } */
+
+        .contact-info h3 {
+            width: 156px;
+            color: #07090D;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 32px;
+            word-wrap: break-word
+        }
+
+        .contact-info p {
+            color: #586174;
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+
+
+        a {
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .certification,
+        .tools-cont {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .certified,
+        .tools {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cert-cont {
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 150px;
+        }
+
+        .cert-parent {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px #E7EAEE solid;
+            align-items: center;
+            gap: 50px;
+             
+        }
+
+        .cert-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .career-cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .exp-cont {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 131px;
+        }
+
+        .exp-col {
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 24px;
+            display: inline-flex;
+        }
+
+        .career-col {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .jobs {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .tools-r {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+
+
+        .pattern7 {
+            background: #ffe699;
+            color: transparent;
+            background: linear-gradient(90deg, #2f13e2 50%, #0b044a 50%);
+            background-position-x: 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: 250% 100%;
+            transition: 1s;
+            transition: background-position-x 0.8s, color 0.8s;
+
+        }
+
+        .pattern7:hover {
+            background-position-x: 0;
+        }
+
+        lord-icon {
+            color: transparent;
+            transition: background-position-x 0.8s, color 0.8s;
+        }
+
+        lord-icon:hover {
+            color: linear-gradient(90deg, #2f13e2 50%, #0b044a 50%);
+        }
+
+        img {
+            filter: grayscale(100%);
+        }
+        img:hover{
+            filter: grayscale(0%);
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .img-cont img{
+            filter: grayscale(0%);
+        }
+        .progress{
+            color: #6252ec;
+        }
+
+        .nav-bar{
+            width: 100%;
+            max-width: 500px;
+            height: 50px;
+            /* background-color: #d7d5f7; */
+            margin: 30px 0;
+            padding: 1.5rem;
+            position: relative;
+
+
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li{
+            list-style: none;
+            padding: 20px;
+            cursor: pointer;
+            /* border-radius: 40px; */
+        }
+        li:hover{
+            background-color: #d7d5f7;
+            border-radius: 50px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #0b044a;
+            transition: 1s;
+        }
+        #footer{
+            
+            background-color: #0b044a;
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-parent{
+            background-color: #0b044a;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-bottom a{
+            color: #4132c3;
+        }
+
+        button{
+            padding: 20px 40px;
+            border-radius: 10px;
+            border: 0;
+            background-color: #6252ec;
+            color: #fff;
+        }
+
+        @media (max-width: 709px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .profile-contact {
+                flex-direction: row;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .cert-parent {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 584px) {
+            .contact-cont {
+                width: 70%;
+            }
+        }
+
+        @media (max-width:616px) {
+            .exp-cont {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#About" class="nav-link">About</a></li>
+            <li><a href="#Certification" class="nav-link">Certifications</a></li>
+            <li><a href="#Experience" class="nav-link">Experience</a></li>
+            <li><a href="#Tools" class="nav-link">Tools</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </ul>
+    </div>
+
+    <section>
+        <header id="About">
+            <div class="profile">
+                <div class="img-cont">
+                    <img src="./images/profile.png" />
+                </div>
+                <div class="profile-bio">
+                    <h1 class="name">Dre Anozie</h1>
+                    <h4 class="role">Entrepreneur, Investor, Web Engineer and Designer </h4>
+                    <div class="bio">
+                        <p>
+                            Experienced Digital Experience Partner, specifically specializing as a Frontent Web Developer with a strong background in web design, UX principles, and project management. I've excelled in crafting high-impact web solutions for the demanding Fintech and eCommerce sectors. Proficient in web design and web development tool stacks. A keen eye for aesthetics and user experience enhancing user web interfaces experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-contact">
+                <a class="contact-cont" href="mailto:anozie.iko@gmail.com" target="_blank">
+                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                        <div class="img-cont">
+                            <lord-icon src="https://cdn.lordicon.com/nzixoeyk.json" trigger="hover"
+                                colors="primary:#e7eaee" style="width:30px; height:30px; cursor: pointer;">
+                            </lord-icon>
+
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="pattern7">Email</4>
+                                <div href="mailto:anozie.iko@gmail.com" target="_blank" class="contact-link">
+                                    <!-- <p>anozie.iko@gmail.com</p> -->
+                                </div>
+                        </div>
+                    </div>
+                    <div href="mailto:anozie.iko@gmail.com" target="_blank"><lord-icon
+                            src="https://cdn.lordicon.com/vduvxizq.json" trigger="hover" colors="primary:#e7eaee"
+                            style="width:50px; height:30px; padding-right: 40px; rotate:-30deg; cursor: pointer;">
+                        </lord-icon></div>
+                </a>
+                <a class="contact-cont" href="https://www.linkedin.com/in/onyi-anozie/" target="_blank">
+                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                        <div class="img-cont">
+                            <lord-icon src="https://cdn.lordicon.com/kthelypq.json" trigger="hover"
+                                colors="primary:#e7eaee" style="width:30px;height:30px; cursor: pointer">
+                            </lord-icon>
+
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="pattern7">LinkedIn</h4>
+                            <div class="contact-link">
+                                <!-- <p>Dre Anozie</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div><lord-icon src="https://cdn.lordicon.com/vduvxizq.json" trigger="hover"
+                            colors="primary:#e7eaee"
+                            style="width:30px; height:30px; padding-right: 40px; rotate:-30deg; cursor: pointer;">
+                        </lord-icon></div>
+                </a>
+                <a class="contact-cont" href="https://github.com/onyianozie" target="_blank">
+                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                        <div class="img-cont">
+                            <lord-icon src="https://cdn.lordicon.com/lzgmgrnn.json" trigger="hover"
+                                colors="primary:#e7eaee" style="width:30px;height:30px">
+                            </lord-icon>
+
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="pattern7">Github</h4>
+                            <div class="contact-link">
+                                <!-- <p>/onyi-anozie</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div href="https://github.com/onyianozie" target="_blank"><lord-icon
+                            src="https://cdn.lordicon.com/vduvxizq.json" trigger="hover" colors="primary:#e7eaee"
+                            style="width:30px; height:30px; padding-right: 40px; rotate:-30deg; cursor: pointer;">
+                        </lord-icon></div>
+                </a>
+                <a class="contact-cont" href="https://dribbble.com/onyianozie" target="_blank">
+                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                        <div class="img-cont">
+                            <lord-icon src="https://cdn.lordicon.com/nizfqlnk.json" trigger="hover"
+                                colors="primary:#e7eaee" style="width:30px;height:30px; cursor: pointer;">
+                            </lord-icon>
+
+                        </div>
+                        <div class="contact-info">
+                            <h4 class="pattern7">Dribble</h4>
+                            <div class="contact-link">
+                                <!-- <p>/onyianozie</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div href="https://dribbble.com/onyianozie" target="_blank"><lord-icon
+                            src="https://cdn.lordicon.com/vduvxizq.json" trigger="hover" colors="primary:#e7eaee"
+                            style="width:30px; height:30px; padding-right: 40px; rotate:-30deg; cursor: pointer;">
+                        </lord-icon></div>
+                </a>
+            </div>
+        </header>
+    </section>
+
+    <section id="Certification">
+        <div class="certification">
+            <div class="certified">
+                <h2>Certified</h2>
+                <!-- <p>Mi tincidunt elit, id quisque ligula </p> -->
+            </div>
+            <div class="cert-cont">
+                <div class="cert-parent">
+                    <div 
+                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/csm.webp" />
+                        <div class="cert-flex">
+                            <p style="color: black; font-size: 16px; line-height: 24px; word-wrap: break-word">
+                                CSM</p>
+                        </div>
+                    </div>
+                    <div 
+                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/azure.png" />
+                        <div class="cert-flex">
+                            <p>Azure</p>
+                            <p class="progress">In Progress</p>
+                        </div>
+                    </div>
+                    <div 
+                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/AWS.png" />
+                        <div class="cert-flex">
+                            <p>AWS</p>
+                            <p class="progress">In Progress</p>
+                        </div>
+                    </div>
+                    <div 
+                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/DMI-CDMP.png" />
+                        <div class="cert-flex">
+                            <p>CDMP</p>
+                            <p class="progress">In Progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Experience">
+
+        <!-- <div class="career-cont">
+
+            <h2>Professional Summary</h2>
+
+            <div style=" flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <p>
+                    Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend
+                    faucibus
+                    eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris
+                    posuere
+                    vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.
+                </p>
+            </div>
+        </div> -->
+        <div class="exp-cont">
+
+            <div class="exp-col">
+
+                <h4>Experience</h4>
+
+                <!-- <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="/images/stealth.png" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Stealth | 2021 - Present</p>
+                        <p>Partner and Investor, Company name</p>
+                    </div>
+                </div> -->
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="/images//stealth.png" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Consulting | 2023 - Present</p>
+                        <p>Partner and Investor, Company name</p>
+                    </div>
+                </div>
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px"
+                        src="images/shopify_icon_146101.png" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Shopify | 2021</p>
+                        <p>Content Producer and Digital Designer</p>
+                    </div>
+                </div>
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/ciro.jpeg" />
+
+                    <div class="jobs">
+                        <p class="p-bold">CIRO/OCRI | 2021</p>
+                        <p>Multimedia Specialist (Website, Video and Graphics)</p>
+                    </div>
+                </div>
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="images/Freshii Logo.jpg" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Freshii | 2016 - 2019</p>
+                        <p>Senior Video Producer</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="exp-col">
+
+                <h4>Education</h4>
+
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="images/seneca.jpg" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Bachelor of Design, Interaction Design | 2023</p>
+                        <p>Seneca College at York University</p>
+                    </div>
+                </div>
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="images/yorkU.png" />
+
+                    <div class="jobs">
+                        <p class="p-bold">B.A in Film Studies | 2013</p>
+                        <p>York University</p>
+                    </div>
+                </div>
+                <div class="career-col">
+
+                    <img style="width: 56px; height: 56px; border-radius: 9999px" src="images/Juno.png" />
+
+                    <div class="jobs">
+                        <p class="p-bold">Web Development Diploma | 2021</p>
+                        <p>Juno College of Technology</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="Tools">
+        <div class="tools-cont">
+            <div class="tools">
+                <h2>Tools</h2>
+                <p>Current tool stacks. Working on getting 1% better by the minute.</p>
+            </div>
+            <div class="tools-r">
+                <div class="cert-cont">
+                    <div class="cert-parent">
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/html.webp" />
+                            <p>HTML</p>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/css.webp" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>css</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/js.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/react.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>React</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/webflow.svg" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Webflow</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/node.png" />
+                            <p>Node</p>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/figma.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Azure</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/premiere.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Premiere Pro</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px"
+                                src="./images/aftereffects.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>After Effects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="cert-cont">
+                    <div class="cert-parent">
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/figma.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Azure</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/premiere.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>Premiere Pro</p>
+                            </div>
+                        </div>
+                        <div
+                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            <img style="width: 56px; height: 56px; border-radius: 9999px"
+                                src="./images/aftereffects.png" />
+                            <div
+                                style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                                <p>After Effects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+
+        <div class="footer-parent">
+            <div class="contact">
+                <h2>Connect with me</h2>
+                <button class="contact-btn"><h3>Contact</h3></button>
+            </div>
+            <div class="footer-bottom">
+                <p>Developed and Designed by <a href="http://">Dre</a><p>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="./doc.js"></script>
+
+</body>
+
+</html>
