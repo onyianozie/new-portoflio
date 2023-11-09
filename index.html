@@ -409,7 +409,7 @@
             color: #4132c3;
         }
 
-        button {
+        .button {
             padding: 20px 40px;
             border-radius: 10px;
             border: 0;
@@ -418,8 +418,9 @@
             cursor: pointer;
         }
 
-        button h3 a{
-            color: #fff;
+        .contact a{
+            display: flex;
+            justify-content: center;
         }
         .sticky-header {
             position: fixed;
@@ -903,9 +904,8 @@
         <div class="footer-parent">
             <div class="contact">
                 <h2>Connect with me</h2>
-                <button class="contact-btn">
-                    <h3><a href="mailto:anozie.iko@gmail.com">Contact</a></h3>
-                </button>
+                <a href="mailto:anozie.iko@gmail.com" class="button"><h3>Contact</h3></a>
+                   
             </div>
             <div class="footer-bottom">
                 <p>Developed and Designed by <a href="http://">Dre</a>
