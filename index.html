@@ -20,7 +20,7 @@
 
         body {
             margin: 0 auto;
-            max-width: 800px;
+            max-width: 1000px;
             width: 100%;
             height: 100%;
             align-self: center;
@@ -38,7 +38,7 @@
 
         h2 {
             align-self: stretch;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 600;
             line-height: 48px;
             padding-bottom: 10px;
@@ -63,7 +63,7 @@
             padding-top: 30px;
             padding-bottom: 30px;
             justify-content: center;
-            align-items: center;
+           
             gap: 30px;
             width: 100%;
 
@@ -73,10 +73,9 @@
         .wrapper {
             display: flex;
             justify-content: center;
-            align-items: center;
+           
             gap: 70px;
-
-            margin-top: 130px;
+            margin-top: 30px;
         }
 
         .img-cont {
@@ -112,7 +111,7 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 600;
             line-height: 30px;
         }
@@ -151,7 +150,7 @@
             border-radius: 8px;
             border: 1px #E7EAEE solid;
             justify-content: space-between;
-            align-items: center;
+           
             display: flex;
             cursor: pointer;
             box-shadow: 0 5px 15px -5px rgba(1, 1, 177, 0.072);
@@ -224,7 +223,7 @@
         .cert-cont {
             height: 100%;
             justify-content: flex-start;
-            align-items: center;
+           
             gap: 150px;
         }
 
@@ -236,7 +235,7 @@
             padding: 10px 10px;
             border-radius: 8px;
             border: 1px #E7EAEE solid;
-            align-items: center;
+           
             gap: 50px;
 
         }
@@ -245,7 +244,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+           
             text-align: center;
         }
 
@@ -395,7 +394,7 @@
             padding: 50px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+           
             border-radius: 10px 10px 0 0;
         }
 
@@ -404,7 +403,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+           
             gap: 30px;
         }
 
@@ -433,10 +432,10 @@
         }
 
         .sticky-header {
-            position: fixed;
+            position: sticky;
             top: 0;
             width: 100%;
-            max-width: 674px;
+            max-width: 1000px;
             z-index: 100;
             background-color: #090336;
             border-radius: 0 0 10px 10px;
@@ -523,9 +522,6 @@
 } */
         @media (max-width: 709px) {
 
-            .sticky-header{
-                position:unset;
-            }
 
             header {
                 flex-direction: column;
@@ -666,7 +662,7 @@
             </div>
             <div class="profile-contact">
                 <a class="contact-cont" href="mailto:anozie.iko@gmail.com" target="_blank">
-                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                    <div style="height: 58px; justify-content: center; gap: 5px; display: flex">
                         <div class="img-cont">
                             <lord-icon src="https://cdn.lordicon.com/nzixoeyk.json" trigger="hover"
                                 colors="primary:#e7eaee" style="width:30px; height:30px; cursor: pointer;">
@@ -686,7 +682,7 @@
                         </lord-icon></div>
                 </a>
                 <a class="contact-cont" href="https://www.linkedin.com/in/onyi-anozie/" target="_blank">
-                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                    <div style="height: 58px; justify-content: center; gap: 5px; display: flex">
                         <div class="img-cont">
                             <lord-icon src="https://cdn.lordicon.com/kthelypq.json" trigger="hover"
                                 colors="primary:#e7eaee" style="width:30px;height:30px; cursor: pointer">
@@ -706,7 +702,7 @@
                         </lord-icon></div>
                 </a>
                 <a class="contact-cont" href="https://github.com/onyianozie" target="_blank">
-                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                    <div style="height: 58px; justify-content: center; gap: 5px; display: flex">
                         <div class="img-cont">
                             <lord-icon src="https://cdn.lordicon.com/lzgmgrnn.json" trigger="hover"
                                 colors="primary:#e7eaee" style="width:30px;height:30px">
@@ -726,7 +722,7 @@
                         </lord-icon></div>
                 </a>
                 <a class="contact-cont" href="https://dribbble.com/onyianozie" target="_blank">
-                    <div style="height: 58px; justify-content: center; align-items: center; gap: 5px; display: flex">
+                    <div style="height: 58px; justify-content: center; gap: 5px; display: flex">
                         <div class="img-cont">
                             <lord-icon src="https://cdn.lordicon.com/nizfqlnk.json" trigger="hover"
                                 colors="primary:#e7eaee" style="width:30px;height:30px; cursor: pointer;">
@@ -758,7 +754,7 @@
             <div class="cert-cont">
                 <div class="cert-parent">
                     <div
-                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        style="flex-direction: column; justify-content: space-around; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/csm.webp" />
                         <div class="cert-flex">
                             <p style="color: black; font-size: 16px; line-height: 24px; word-wrap: break-word">
@@ -766,7 +762,7 @@
                         </div>
                     </div>
                     <div
-                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        style="flex-direction: column; justify-content: space-around; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/webflow.svg" />
                         <div class="cert-flex">
                             <p style="color: black; font-size: 16px; line-height: 24px; word-wrap: break-word">
@@ -774,7 +770,7 @@
                         </div>
                     </div>
                     <div
-                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        style="flex-direction: column; justify-content: space-around; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/azure.png" />
                         <div class="cert-flex">
                             <p>Azure</p>
@@ -782,7 +778,7 @@
                         </div>
                     </div>
                     <div
-                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        style="flex-direction: column; justify-content: space-around; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/AWS.png" />
                         <div class="cert-flex">
                             <p>AWS</p>
@@ -790,7 +786,7 @@
                         </div>
                     </div>
                     <div
-                        style="flex-direction: column; justify-content: space-around; align-items: center; gap: 16px; display: inline-flex">
+                        style="flex-direction: column; justify-content: space-around; gap: 16px; display: inline-flex">
                         <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/DMI-CDMP.png" />
                         <div class="cert-flex">
                             <p>CDMP</p>
@@ -920,12 +916,12 @@
                 <div class="cert-cont">
                     <div class="cert-parent">
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/html.webp" />
                             <p>HTML</p>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/css.webp" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -933,7 +929,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/js.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -941,7 +937,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/react.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -949,7 +945,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/webflow.svg" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -958,12 +954,12 @@
                         </div>
 
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/node.png" />
                             <p>Node</p>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/figma.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -971,7 +967,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/premiere.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -979,7 +975,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px"
                                 src="./images/aftereffects.png" />
                             <div
@@ -993,7 +989,7 @@
                 <!-- <div class="cert-cont">
                     <div class="cert-parent">
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/figma.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -1001,7 +997,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px" src="./images/premiere.png" />
                             <div
                                 style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -1009,7 +1005,7 @@
                             </div>
                         </div>
                         <div
-                            style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: inline-flex">
+                            style="flex-direction: column; justify-content: center; gap: 16px; display: inline-flex">
                             <img style="width: 56px; height: 56px; border-radius: 9999px"
                                 src="./images/aftereffects.png" />
                             <div
